@@ -1,0 +1,5 @@
+{% assign item_year = include.item.date | date: "%Y" %}
+{% assign item_year_label = include.item.date_label | default: "" | downcase %}
+{% if item_year_label contains "present" %}
+    {% assign item_year = "now" | date: "%Y" %}
+{% endif %}

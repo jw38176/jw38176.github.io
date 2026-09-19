@@ -1,0 +1,68 @@
+---
+layout: default
+title: Experience
+navbar_title: Experience
+body_attr: >-
+  data-spy="scroll" data-target="#navbar-year" data-offset="100"
+---
+
+<div class="row">
+    <div class="col-12 col-lg-10">
+        {% for section in site.data.experience.sections %}
+        {% assign section_id = section.short_name | default: section.name | slugify %}
+        {% assign items_sorted = section.items | sort: "date" | reverse %}
+        {% assign years_str = "" %}
+        {% for item in items_sorted %}
+            {% include widgets/cv_item_year.html item=item %}
+            {% unless years_str contains item_year %}
+                {% assign years_str = years_str | append: item_year | append: " " %}
+            {% endunless %}
+        {% endfor %}
+        {% assign items_by_year = years_str | split: " " | compact | sort | reverse %}
+        <h1 class="pt-4" id="{{ section_id }}">{{ section.name }}</h1>
+        {% for year in items_by_year %}
+        {% assign year_count = 0 %}
+        {% for item in items_sorted %}
+            {% include widgets/cv_item_year.html item=item %}
+            {% if item_year == year %}
+                {% assign year_count = year_count | plus: 1 %}
+            {% endif %}
+        {% endfor %}
+        <h2 class="pt-3" id="{{ section_id }}-{{ year }}">{{ year }}</h2>
+        <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
+            {% assign year_shown = 0 %}
+            {% for item in items_sorted %}
+                {% include widgets/cv_item_year.html item=item %}
+                {% if item_year == year %}
+                    {% assign year_shown = year_shown | plus: 1 %}
+                    {% assign is_last = false %}
+                    {% if year_shown == year_count %}{% assign is_last = true %}{% endif %}
+                    {% include widgets/cv_item.html item=item hide_bottom_border=is_last %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+        {% endfor %}
+    </div>
+
+    <div class="col-2 d-none d-lg-block">
+        <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
+            {% for section in site.data.experience.sections %}
+            {% assign section_id = section.short_name | default: section.name | slugify %}
+            {% assign items_sorted = section.items | sort: "date" | reverse %}
+            {% assign years_str = "" %}
+            {% for item in items_sorted %}
+                {% include widgets/cv_item_year.html item=item %}
+                {% unless years_str contains item_year %}
+                    {% assign years_str = years_str | append: item_year | append: " " %}
+                {% endunless %}
+            {% endfor %}
+            {% assign items_by_year = years_str | split: " " | compact | sort | reverse %}
+            <a class="nav-link d-block font-weight-bold" href="#{{ section_id }}">{{ section.short_name | default: section.name }}</a>
+            {% for year in items_by_year %}
+            <a class="nav-link d-block" href="#{{ section_id }}-{{ year }}">{{ year }}</a>
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

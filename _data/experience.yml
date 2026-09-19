@@ -1,0 +1,129 @@
+sections:
+- name: Professional Experience
+  short_name: Professional
+  items:
+  - position: Postgraduate Researcher
+    name: Imperial College London
+    logo: /assets/images/badges/logo-imperial.png
+    location: London, United Kingdom
+    date: 2024-10-02
+    date_label: Oct. 2024 – Present
+    highlights:
+      - "Topics: Computer Architecture, Data Prefetching, Memory Systems, Design Space Exploration"
+      - 'Supervisor: <a href="https://www.doc.ic.ac.uk/~phjk/" target="_blank">Paul H. J. Kelly</a> (Software Performance Optimisation Group)'
+
+  - position: CPU Architecture Intern
+    name: Huawei Technologies
+    logo: /assets/images/badges/logo-huawei.png
+    location: Cambridge, United Kingdom
+    date: 2025-02-01
+    date_label: Feb. 2025 – Present
+    highlights:
+      - Researching data prefetching related topics.
+      - Based in the Huawei Cambridge Research Center.
+
+  - position: Doctoral Teaching Scholar
+    name: Imperial College London
+    logo: /assets/images/badges/logo-imperial.png
+    location: London, United Kingdom
+    date: 2024-10-01
+    date_label: Oct. 2024 – Present
+    highlights:
+      - Assisting the department in core teaching roles, including interacting with students, coursework planning, coursework marking, performing code review sessions, and developing new labs and exercises.
+
+  - position: PMU Design Verification Intern
+    name: Apple Inc.
+    logo: /assets/images/badges/logo-apple.jpg
+    location: Swindon, United Kingdom
+    date: 2023-04-01
+    date_label: Apr. 2023 – Oct. 2023
+    highlights:
+      - Contributed significantly to the triage and verification of a PMU project, maintained and extended the testbench structure, focusing on Security and Bus related designs. Resulted in a tape-out regression pass rate of over 99.5%.
+      - Developed a template-based tool for automatically generating SystemVerilog QDI (quasi delay insensitive) FSM test benches from the specification source.
+      - Developed several tools for monitoring design stability and verification completeness.
+
+  - position: Undergraduate Teaching Assistant
+    name: Imperial College London
+    logo: /assets/images/badges/logo-imperial.png
+    location: London, United Kingdom
+    date: 2022-10-01
+    date_label: Oct. 2022 – Dec. 2023
+    highlights:
+      - Participated in teaching and guiding over 160 senior year students to code in SystemVerilog and use Verilator in the Instruction Architecture and Compiler module.
+
+  - position: Undergraduate Research Opportunities Programme
+    name: Imperial College London
+    logo: /assets/images/badges/logo-imperial.png
+    location: London, United Kingdom
+    date: 2022-07-01
+    date_label: Jul. 2022 – Sept. 2022
+    highlights:
+      - Reshaped and modernized the Instruction Architecture and Compiler senior year course by targeting RISC-V and building a RV32I compliant CPU with cache and exception handling using SystemVerilog, led by Professor Peter Cheung.
+
+  - position: Data Analysis Intern
+    name: Tencent Music Entertainment Group
+    logo: /assets/images/badges/logo-tme.avif
+    location: Shenzhen, China
+    date: 2021-08-01
+    date_label: Aug. 2021 – Sept. 2021
+    highlights:
+      - Operated the data analysis of the Tencent 2021 Autumn Campus Recruitment Program.
+      - Automated the results monitoring of the Tencent 2021 Summer Apprenticeship Program using Excel, handling over ~20,000 applicants.
+
+- name: Leadership Roles
+  short_name: Leadership
+  items:
+  - position: Co-Founder & President
+    name: WenHua Chinese Drama Society
+    logo: /assets/images/badges/logo-wenhua.jpg
+    date: 2024-10-01
+    date_label: Oct. 2024 – Present
+    highlights:
+      - Coordinate and lead the society in an annual Chinese play production.
+      - Organise beginner acting workshops.
+
+  - position: President
+    name: International Foodies Society
+    logo: /assets/images/badges/logo-foodies.jpg
+    date: 2025-04-01
+    date_label: Apr. 2025 – Present
+    highlights:
+      - Organise food related events on campus, including dinner sessions and food group-buys.
+      - Produce independently-designed merchandise for Imperial students.
+      - Host cultural events such as hand-crafting workshops and Chinese New Year celebrations.
+
+  - position: Head of Cultural Department
+    name: Imperial Chinese Students & Scholars Association
+    logo: /assets/images/badges/logo-cssa.png
+    date: 2022-04-01
+    date_label: Apr. 2022 – Apr. 2023
+    highlights:
+      - Leader of the cultural department which aims to host and enable events and activities that develop and nurture a community centered around Chinese culture.
+      - Raised over ~£3,200 in selling CSSA merchandise for aiding rural women's education in China.
+
+  - position: CSGO Team Captain
+    name: Imperial Gaming and Esports
+    logo: /assets/images/badges/logo-ige.avif
+    date: 2020-10-01
+    date_label: Oct. 2020 – Jan. 2022
+    highlights:
+      - Arranged and carried out weekly practice sessions in preparation for competitions.
+      - Led the team to carry out tactics in game.
+
+  - position: Founder and Captain
+    name: SWIS Robotics · FIRST Robotics Competition
+    logo: /assets/images/badges/logo-frc.avif
+    date: 2018-11-01
+    date_label: Nov. 2018 – June 2020
+    highlights:
+      - Founded a team of 23 in 2017. Managed the sub-teams including building & programming (2 robots built), marketing (over ~£13,000 raised), and designing (CAD models, logos, and blog post editing).
+      - Competed in multiple FIRST Robotics Competition (FRC) tournaments, breaking into the world championships at Houston, USA in 2019.
+
+  - position: Co-Founder & Academic Director
+    name: SWIS Model United Nations
+    logo: /assets/images/badges/logo-mun.avif
+    date: 2021-08-01
+    date_label: Aug. 2021 – Sept. 2021
+    highlights:
+      - Organized a 3-day national MUN conference with over 200 delegates and 8 committees.
+      - Prepared and structured the conference topics, conference procedures, resolution guidelines, and code of conduct of the conference.

@@ -1,0 +1,53 @@
+{% assign item = include.item %}
+<div class="p-3 {% unless include.hide_bottom_border %}border-bottom border-gray{% endunless %}">
+    <div class="d-flex">
+        {% if item.logo %}
+        <img src="{{ item.logo | relative_url }}" alt="{{ item.org | default: item.name }}"
+            style="width: 28px; height: 28px; object-fit: contain;" class="mr-3 mt-1">
+        {% endif %}
+        <div class="flex-grow-1">
+            <div class="d-flex align-items-start">
+                <div>
+                    <h5 class="mt-0 mb-1 item-title">
+                        {{ item.title | default: item.position }}{% if item.extra %} [{{ item.extra }}]{% endif %}
+                        {% if item.code %}
+                        <span class="badge badge-pill badge-light align-middle">{{ item.code }}</span>
+                        {% endif %}
+                    </h5>
+                    {% if item.role or item.name or item.org %}
+                    <p class="mt-0 mb-0 small">
+                        {% if item.role %}{{ item.role }}{% endif %}
+                        {% if item.role and item.org %} · {% endif %}
+                        {% if item.org %}{{ item.org }}{% endif %}
+                        {% if item.name and item.position %}{{ item.name }}{% endif %}
+                    </p>
+                    {% endif %}
+                    {% if item.location %}
+                    <p class="mt-0 mb-0 small text-muted">{{ item.location }}</p>
+                    {% endif %}
+                </div>
+                {% assign date_text = item.date_label | default: item.date %}
+                {% if date_text %}
+                <div class="ml-auto pl-3 small text-muted no-break"><em>{{ date_text }}</em></div>
+                {% endif %}
+            </div>
+            {% if item.description %}
+            <p class="mt-2 mb-0 small text-muted">{{ item.description }}</p>
+            {% endif %}
+            {% if item.highlights %}
+            <ul class="mt-2 mb-0 pl-3 small text-muted">
+                {% for highlight in item.highlights %}
+                <li>{{ highlight }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% if item.links %}
+            <p class="pb-0 mb-0 abstract-links">
+                {% for link in item.links %}
+                <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
+                {% endfor %}
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</div>

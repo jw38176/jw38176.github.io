@@ -1,0 +1,45 @@
+items:
+- title: System Performance Engineering
+  extra: GTA
+  org: 3rd Year Computing Module
+  # logo: /assets/images/badges/logo-imperial.png
+  date: 2026-01-01
+  date_label: 2026
+
+- title: Advanced Computer Architecture
+  extra: GTA
+  role: Core Support Lead
+  org: 3rd Year / Master Level Computing Module
+  # logo: /assets/images/badges/logo-imperial.png
+  date: 2024-10-04
+  date_label: 2024 – Present
+
+- title: Computing Laboratory
+  extra: GTA
+  org: 2nd Year Computing Projects (PintOS / WACC)
+  # logo: /assets/images/badges/logo-imperial.png
+  date: 2024-10-03
+  date_label: 2024 – Present
+
+- title: Introduction to Computer Architecture
+  extra: GTA
+  org: 1st Year Computing Module
+  # logo: /assets/images/badges/logo-imperial.png
+  date: 2024-10-02
+  date_label: 2024 – Present
+
+- title: Compilers
+  extra: GTA
+  org: 2nd Year Computing Module
+  # logo: /assets/images/badges/logo-imperial.png
+  date: 2024-01-01
+  date_label: 2024
+
+- title: Instruction Architecture and Compilers
+  extra: UTA
+  org: 2nd Year Electrical and Information Engineering Module
+  # logo: /assets/images/badges/logo-imperial.png
+  date: 2022-10-01
+  date_label: 2022 – 2023
+  # links:
+  #   Course: http://www.ee.ic.ac.uk/pcheung/teaching/EIE2-IAC/
