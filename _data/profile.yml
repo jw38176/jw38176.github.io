@@ -19,7 +19,7 @@ orcid: 0009-0007-9732-7147
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    I am a PhD candidate / Teaching Scholar at <a href="https://www.imperial.ac.uk/" target="_blank">Imperial College London</a> under the supervision of Professor <a href="https://www.doc.ic.ac.uk/~phjk/" target="_blank">Paul H J Kelly</a>, and I collaborate closely with <a href="https://samainsworth.github.io/" target="_blank">Dr. Sam Ainsworth</a>. I am also a part-time CPU architecture researcher for Huawei.
+    I am a PhD candidate / Teaching Scholar at <a href="https://www.imperial.ac.uk/" target="_blank">Imperial College London</a> under the supervision of Professor <a href="https://www.doc.ic.ac.uk/~phjk/" target="_blank">Paul H J Kelly</a>, and I collaborate closely with Dr. <a href="https://samainsworth.github.io/" target="_blank">Sam Ainsworth</a>. I am also a part-time CPU architecture researcher for Huawei.
   </p>
     <p>
     I am interested in everything related to computer architecture, specifically data prefetching, memory systems, and design space exploration. I aim to also pursue research that is less strictly quantitative but more focused on first principles.
