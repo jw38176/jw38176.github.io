@@ -55,5 +55,5 @@ items:
   # logo: /assets/images/badges/logo-imperial.png
   date: 2022-10-01
   date_label: 2022 – 2023
-  links:
-    Course: http://www.ee.ic.ac.uk/pcheung/teaching/EIE2-IAC/
+  # links:
+  #   Course: http://www.ee.ic.ac.uk/pcheung/teaching/EIE2-IAC/
