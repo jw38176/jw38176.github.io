@@ -18,4 +18,5 @@ authors:
 links:
   PDF: assets/files/Proba.pdf
   Artifact: https://github.com/justinhuang666666/Proba_Artifact/
+  Slides: assets/files/Proba.pptx
 ---
