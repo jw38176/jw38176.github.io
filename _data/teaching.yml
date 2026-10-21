@@ -8,25 +8,39 @@ items:
 
 - title: Advanced Computer Architecture
   extra: GTA
-  role: Core Support Lead
+  role: [Core Support Lead]
   org: 3rd Year / Master Level Computing Module
   # logo: /assets/images/badges/logo-imperial.png
   date: 2024-10-04
-  date_label: 2024 – Present
+  date_label: 2024 – 2027
+
+- title: Computing Research Collective
+  extra: GTA
+  org: 3rd Year Computing Module
+  # logo: /assets/images/badges/logo-imperial.png
+  date: 2026-10-03
+  date_label: 2026
+
+- title: Communicating Computer Science in Schools
+  extra: GTA
+  org: 3rd Year Computing Module
+  # logo: /assets/images/badges/logo-imperial.png
+  date: 2027-01-01
+  date_label: 2027
 
 - title: Computing Laboratory
   extra: GTA
   org: 2nd Year Computing Projects (PintOS / WACC)
   # logo: /assets/images/badges/logo-imperial.png
   date: 2024-10-03
-  date_label: 2024 – Present
+  date_label: 2024 – 2026
 
 - title: Introduction to Computer Architecture
   extra: GTA
   org: 1st Year Computing Module
   # logo: /assets/images/badges/logo-imperial.png
   date: 2024-10-02
-  date_label: 2024 – Present
+  date_label: 2024 – 2026
 
 - title: Compilers
   extra: GTA
@@ -41,5 +55,5 @@ items:
   # logo: /assets/images/badges/logo-imperial.png
   date: 2022-10-01
   date_label: 2022 – 2023
-  # links:
-  #   Course: http://www.ee.ic.ac.uk/pcheung/teaching/EIE2-IAC/
+  links:
+    Course: http://www.ee.ic.ac.uk/pcheung/teaching/EIE2-IAC/
