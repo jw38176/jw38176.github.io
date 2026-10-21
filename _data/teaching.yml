@@ -12,7 +12,7 @@ items:
   org: 3rd Year / Master Level Computing Module
   # logo: /assets/images/badges/logo-imperial.png
   date: 2027-10-04
-  date_label: 2024 – 2027
+  date_label: 2024 – Present
 
 - title: Computing Research Collective
   extra: GTA
@@ -39,7 +39,7 @@ items:
   extra: GTA
   org: 1st Year Computing Module
   # logo: /assets/images/badges/logo-imperial.png
-  date: 2026-10-02
+  date: 2026-11-11
   date_label: 2024 – 2026
 
 - title: Compilers
