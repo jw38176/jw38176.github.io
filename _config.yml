@@ -23,7 +23,7 @@ lang: en
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # Paste the content value from Google Search Console (HTML tag method) to verify ownership.
-google_site_verification: "GhaK5HMTHXdN6trZpo-8WJ3pyRG5OcUjU9uXIGiZQvQ"
+google_site_verification: "4Zx8P_wV1e8doSBG9ZvXFwnhjKw6fmRi8468Y7Tqs8U"
 
 # Build settings
 markdown: kramdown
