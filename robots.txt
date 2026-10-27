@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jw38176.github.io/sitemap.xml

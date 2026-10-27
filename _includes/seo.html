@@ -1,0 +1,86 @@
+{%- assign person = site.data.profile.primary_name | default: site.title -%}
+{%- assign site_name = site.title | default: person -%}
+{%- assign site_root = site.url | append: site.baseurl -%}
+{%- assign description = page.description | default: site.description | strip_html | strip | replace: "\n", " " -%}
+{%- assign canonical_path = page.url | replace: "/index.html", "/" | replace: ".html", "" -%}
+{%- if canonical_path == "" -%}
+  {%- assign canonical_path = "/" -%}
+{%- endif -%}
+{%- assign canonical = site_root | append: canonical_path -%}
+{%- if page.url == "/" or page.url == "/index.html" -%}
+  {%- assign page_title = person | append: " | PhD Candidate at Imperial College London" -%}
+  {%- assign og_type = "profile" -%}
+  {%- assign schema_type = "ProfilePage" -%}
+{%- else -%}
+  {%- assign page_title = page.title | append: " | " | append: site_name -%}
+  {%- assign og_type = "website" -%}
+  {%- assign schema_type = "WebPage" -%}
+{%- endif -%}
+{%- if page.sitemap == false -%}
+  {%- assign robots = "noindex, follow" -%}
+{%- else -%}
+  {%- assign robots = "index, follow, max-image-preview:large" -%}
+{%- endif -%}
+{%- assign image = site.data.profile.portrait_url | absolute_url -%}
+{%- assign sep = "" -%}
+<title>{{ page_title | escape }}</title>
+<meta name="description" content="{{ description | escape }}">
+<meta name="author" content="{{ person | escape }}">
+<meta name="robots" content="{{ robots }}">
+<link rel="canonical" href="{{ canonical }}">
+{% if site.google_site_verification %}
+<meta name="google-site-verification" content="{{ site.google_site_verification | escape }}">
+{% endif %}
+<meta property="og:title" content="{{ page_title | escape }}">
+<meta property="og:description" content="{{ description | escape }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:type" content="{{ og_type }}">
+<meta property="og:site_name" content="{{ site_name | escape }}">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="{{ image }}">
+<meta property="og:image:alt" content="{{ person | escape }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ page_title | escape }}">
+<meta name="twitter:description" content="{{ description | escape }}">
+<meta name="twitter:image" content="{{ image }}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "{{ site_root }}/#person",
+      "name": {{ person | jsonify }},
+      "url": "{{ site_root }}/",
+      "jobTitle": ["PhD Candidate", "Teaching Scholar"],
+      "worksFor": {
+        "@type": "CollegeOrUniversity",
+        "name": "Imperial College London",
+        "url": "https://www.imperial.ac.uk/"
+      },
+      "email": {{ site.data.profile.email | prepend: "mailto:" | jsonify }},
+      "image": {{ image | jsonify }},
+      "sameAs": [{% if site.data.profile.github %}{{ sep }}"https://github.com/{{ site.data.profile.github }}"{% assign sep = ", " %}{% endif %}{% if site.data.profile.linkedin %}{{ sep }}"https://www.linkedin.com/in/{{ site.data.profile.linkedin }}"{% assign sep = ", " %}{% endif %}{% if site.data.profile.orcid %}{{ sep }}"https://orcid.org/{{ site.data.profile.orcid }}"{% assign sep = ", " %}{% endif %}{% if site.data.profile.twitter %}{{ sep }}"https://twitter.com/{{ site.data.profile.twitter }}"{% assign sep = ", " %}{% endif %}],
+      "knowsAbout": ["Computer architecture", "Data prefetching", "Memory systems", "Design space exploration"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site_root }}/#website",
+      "url": "{{ site_root }}/",
+      "name": {{ site_name | jsonify }},
+      "description": {{ site.description | strip | jsonify }},
+      "publisher": { "@id": "{{ site_root }}/#person" }
+    },
+    {
+      "@type": "{{ schema_type }}",
+      "@id": "{{ canonical }}#webpage",
+      "url": "{{ canonical }}",
+      "name": {{ page_title | jsonify }},
+      "description": {{ description | jsonify }},
+      "isPartOf": { "@id": "{{ site_root }}/#website" },
+      "about": { "@id": "{{ site_root }}/#person" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>

@@ -1,0 +1,28 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- assign site_root = site.url | append: site.baseurl -%}
+{%- for page in site.html_pages -%}
+{%- unless page.sitemap == false -%}
+{%- assign loc = page.url | replace: "/index.html", "/" | replace: ".html", "" -%}
+{%- if loc == "" -%}
+{%- assign loc = "/" -%}
+{%- endif -%}
+  <url>
+    <loc>{{ site_root }}{{ loc }}</loc>
+  </url>
+{%- endunless -%}
+{%- endfor -%}
+{%- for post in site.posts -%}
+{%- unless post.sitemap == false -%}
+{%- assign loc = post.url | replace: ".html", "" -%}
+  <url>
+    <loc>{{ site_root }}{{ loc }}</loc>
+    <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
+  </url>
+{%- endunless -%}
+{%- endfor -%}
+</urlset>

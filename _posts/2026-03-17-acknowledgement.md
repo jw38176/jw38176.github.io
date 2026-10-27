@@ -2,6 +2,7 @@
 layout: blog_post
 title: 'Acknowledgement'
 date: 2026-03-17
+sitemap: false
 tags:
   - Blog
   - Post

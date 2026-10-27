@@ -13,7 +13,17 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+title: Jacky Wong
+author: Jacky Wong
+description: >-
+  Jacky Wong is a PhD candidate and Teaching Scholar at Imperial College London,
+  researching computer architecture, data prefetching, and memory systems.
+url: https://jw38176.github.io
+lang: en
 baseurl: "" # the subpath of your site, e.g. /blog
+
+# Paste the content value from Google Search Console (HTML tag method) to verify ownership.
+google_site_verification: "GhaK5HMTHXdN6trZpo-8WJ3pyRG5OcUjU9uXIGiZQvQ"
 
 # Build settings
 markdown: kramdown
