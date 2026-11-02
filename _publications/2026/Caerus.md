@@ -23,4 +23,5 @@ authors:
 links:
   PDF: assets/files/Caerus.pdf
   Artifact: https://github.com/jw38176/Caerus_Artifact
+  Slides: assets/files/Caerus.pptx
 ---
