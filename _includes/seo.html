@@ -78,6 +78,13 @@
       "name": {{ page_title | jsonify }},
       "description": {{ description | jsonify }},
       "isPartOf": { "@id": "{{ site_root }}/#website" },
+      {%- if schema_type == "ProfilePage" %}
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "{{ site_root }}/#person",
+        "name": {{ person | jsonify }}
+      },
+      {%- endif %}
       "about": { "@id": "{{ site_root }}/#person" },
       "inLanguage": "en"
     }
