@@ -44,6 +44,10 @@ a:hover {
     border-color: var(--accent);
 }
 
+.nav-pills .nav-link {
+    border-radius: 0;
+}
+
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
     background-color: var(--accent);
@@ -110,25 +114,26 @@ a.author-colored:hover {
 }
 
 .card {
-    border-radius: 0.8rem!important;
+    border-radius: 0 !important;
 }
 
 .card-img-overlay {
-    border-radius: 0.8rem!important;
+    border-radius: 0 !important;
 }
 
-.rounded-xl {
-    border-radius: 0.8rem!important;
+.rounded-xl,
+.rounded-sm {
+    border-radius: 0 !important;
 }
 
 .rounded-xl-bottom {
-    border-bottom-right-radius: 0.8rem !important;
-    border-bottom-left-radius: 0.8rem !important;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
 }
 
 .rounded-xl-top {
-    border-top-left-radius: 0.8rem !important;
-    border-top-right-radius: 0.8rem !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
 }
 
 
@@ -185,6 +190,11 @@ div.lazy {
 
 .badge-publication {
     font-size: 100%;
+}
+
+.badge-distinguished {
+    color: #fff;
+    background-color: #EE4B2B;
 }
 
 .abstract-links {

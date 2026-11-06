@@ -1,13 +1,13 @@
 ---
 title:          "Caerus: Prefetching by Thinking Globally and Acting Locally"
-date:           2026-10-30
+date:           2026-11-02
 selected:       true
 pub:            " International Symposium on Microarchitecture (MICRO)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
 # pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
 pub_date:       "2026"
-pub_last:       ' <span class="badge badge-pill badge-publication badge-info">Distinguished Paper Nominee</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-info">Distinguished Paper</span>'
 # semantic_scholar_id: 11ac0b5634a282f1a0da204b98e7473d8b480dfb  # use this to retrieve citation count
 
 abstract: >-
@@ -21,7 +21,9 @@ authors:
   - Sam Ainsworth
   - Paul H J Kelly 
 links:
+  # DOI: 
   PDF: assets/files/Caerus.pdf
   Artifact: https://github.com/jw38176/Caerus_Artifact
   Slides: assets/files/Caerus.pptx
+  Video: https://youtu.be/o9t0XNTdDF4
 ---
