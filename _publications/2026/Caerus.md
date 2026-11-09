@@ -26,4 +26,5 @@ links:
   Artifact: https://github.com/jw38176/Caerus_Artifact
   Slides: assets/files/Caerus.pptx
   Video: https://youtu.be/o9t0XNTdDF4
+  Poster: assets/files/Caerus_Poster.pdf
 ---
