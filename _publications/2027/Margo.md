@@ -18,7 +18,7 @@ authors:
   - Paul H J Kelly
 links:
   # DOI: 
-  PDF: assets/files/Margo-Pre-Release.pdf
+  Pre-Release: assets/files/Margo-Pre-Release.pdf
   # Artifact: https://github.com/justinhuang666666/Proba_Artifact/
   # Slides: assets/files/Proba.pptx
 ---
