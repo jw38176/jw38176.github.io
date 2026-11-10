@@ -10,7 +10,7 @@ pub_date:       "2027"
 # semantic_scholar_id: 11ac0b5634a282f1a0da204b98e7473d8b480dfb  # use this to retrieve citation count
 
 abstract: >-
-  A dynamic prefetcher management scheme that observes the fine-grained margianl effects of managed prefetchers. Paper coming soon! 
+  A dynamic prefetcher management scheme that observes the fine-grained margianl effects of managed prefetchers. Camera ready coming soon!
 authors:
   - Jacky Wong
   - Yinting Huang 
@@ -18,7 +18,7 @@ authors:
   - Paul H J Kelly
 links:
   # DOI: 
-  # PDF: assets/files/Proba.pdf
+  PDF: assets/files/Margo-Pre-Release.pdf
   # Artifact: https://github.com/justinhuang666666/Proba_Artifact/
   # Slides: assets/files/Proba.pptx
 ---
