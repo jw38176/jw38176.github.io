@@ -1,0 +1,26 @@
+{% comment %}
+Renders artifact evaluation badges for a publication item.
+Usage: {% include widgets/ae_badges.html badges=item.ae_badges %}
+       {% include widgets/ae_badges.html badges=item.ae_badges icons_only=true %}
+       {% include widgets/ae_badges.html badges=item.ae_badges circle=true %}
+Badge keys are looked up in _data/ae_badges.yml; unknown keys render as-is.
+With icons_only=true only the badge icon is shown (label remains as tooltip).
+With circle=true badges render as round SVG images (label as alt text/tooltip).
+{% endcomment %}
+{%- if include.badges -%}
+<div class="ae-badges">
+    {% for badge in include.badges %}
+    {% assign b = site.data.ae_badges[badge] %}
+    {% if b %}
+    {% if include.circle %}
+    <img class="ae-badge-img" src="{{ b.img | relative_url }}" alt="{{ b.label }}" title="{{ b.label }}">
+    {% else %}
+    <span class="badge badge-pill ae-badge" style="background-color: {{ b.color }};" title="{{ b.label }}"
+        aria-label="{{ b.label }}"><i class="fas {{ b.icon }}"></i>{% unless include.icons_only %} {{ b.label }}{% endunless %}</span>
+    {% endif %}
+    {% else %}
+    <span class="badge badge-pill ae-badge ae-badge-default">{{ badge }}</span>
+    {% endif %}
+    {% endfor %}
+</div>
+{%- endif -%}

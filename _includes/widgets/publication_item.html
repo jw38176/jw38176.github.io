@@ -10,21 +10,14 @@
         {%- else -%}
         <div class="col-md-12 p-3">
             {%- endif -%}
-            <h5 class="mt-0 mb-1 item-title">{{ item.title }}</h5>
+            {% include widgets/ae_badges.html badges=item.ae_badges icons_only=true circle=true %}
+            <h5 class="mt-0 mb-1 item-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h5>
             <p class="mt-0 mb-1 author-list">{% include widgets/author_list.html authors=item.authors %}</p>
             <p class="mt-0 mb-1">{{item.pub_pre}}<strong><i>{{ item.pub }}</i></strong>{{ item.pub_post }} {{
                 item.pub_date }} {{ item.pub_last }} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span></p>
             <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
-            
-            <p class="pb-0 mb-0 abstract-links">
-                {% for link in item.links %}
-                {% if link[1].url %}
-                <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
-                {% else %}
-                <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
-                {% endif %}
-                {% endfor %}
-            </p>
+
+            {% include widgets/publication_links.html links=item.links %}
 
         </div>
     </div>
@@ -36,21 +29,14 @@
         <div class="d-flex align-items-start flex-column py-3 px-4">
             <div class="mb-auto"></div>
             <div>
-                <h5 class="mt-0 mb-1 item-title">{{ item.title }}</h5>
+                {% include widgets/ae_badges.html badges=item.ae_badges icons_only=true circle=true %}
+                <h5 class="mt-0 mb-1 item-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h5>
                 <p class="mt-0 mb-1 author-list">{% include widgets/author_list.html authors=item.authors %}</p>
                 <p class="mt-0 mb-1">{{item.pub_pre}}<strong><i>{{ item.pub }}</i></strong>{{ item.pub_post }} {{
                     item.pub_date }} {{ item.pub_last }} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span></p>
                 <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
-                
-                <p class="pb-0 mb-0 abstract-links">
-                    {% for link in item.links %}
-                    {% if link[1].url %}
-                    <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
-                    {% else %}
-                    <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
-                    {% endif %}
-                    {% endfor %}
-                </p>
+
+                {% include widgets/publication_links.html links=item.links %}
             </div>
         </div>
     </div>

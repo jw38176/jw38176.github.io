@@ -1,0 +1,17 @@
+{% comment %}
+Renders the resource links of a publication ([PDF], [Slides], ...).
+Internal links (e.g. assets/files/...) are resolved relative to the site root so
+they work both on the publications list and on individual publication pages.
+Usage: {% include widgets/publication_links.html links=item.links %}
+{% endcomment %}
+<p class="pb-0 mb-0 abstract-links">
+    {% for link in include.links %}
+    {% if link[1].url %}
+    <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
+    {% elsif link[1] contains "://" %}
+    <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
+    {% else %}
+    <a target="_blank" href="{{ link[1] | relative_url }}">[{{ link[0] }}]</a>
+    {% endif %}
+    {% endfor %}
+</p>

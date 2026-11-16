@@ -9,8 +9,15 @@ pub:            "Parallel Architectures and Compilation Techniques (PACT)"
 pub_date:       "2026"
 # semantic_scholar_id: 11ac0b5634a282f1a0da204b98e7473d8b480dfb  # use this to retrieve citation count
 
+ae_badges:
+  - available
+  - evaluated
+  - reproduced
+
 abstract: >-
-  A DRAM-efficient SMS-based prefetcher that uses probablistic pattern updates to achieve fine-grain accuracy and coverage trade-offs. 
+  A DRAM-efficient SMS-based prefetcher that uses probablistic pattern updates to achieve fine-grain accuracy and coverage trade-offs.
+long_abstract: >-
+  Spatial Memory Streaming (SMS) prefetchers exploit recurring spatial access patterns across memory regions to predict future accesses. Despite their effectiveness, existing SMS-based designs suffer from coarse control over aggressiveness and limited adaptability to dynamic program behavior and historical patterns. In this work, we present Proba, a feedback-directed SMS-based prefetcher that integrates probabilistic pattern updates, marginal accuracy decision-making, and pattern accumulation over several trigger features to achieve fine-grained accuracy-coverage trade-offs. When accuracy deteriorates, Proba moderates its aggressiveness to prioritize accurate prefetches; conversely, when accuracy rises, it expands its coverage. Proba achieves higher speedups than any other SMS-based prefetcher while being vastly more efficient in DRAM traffic. This culminates in a large performance gap between Proba and other techniques in multicore and DRAM-constrained scenarios without harming single-threaded throughput. 
 authors:
   - Yinting Huang 
   - Jacky Wong

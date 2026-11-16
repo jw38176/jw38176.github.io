@@ -44,8 +44,21 @@ plugins:
 
 # timezone: Asia/Shanghai
 
+# Publish documents dated in the future (e.g. upcoming publications)
+future: true
+
 collections:
-  - publications
-  - news
-  - showcase
-  - posts
+  publications:
+    output: true
+    permalink: /publications/:name/
+  news:
+  showcase:
+  posts:
+
+defaults:
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: publication
+      navbar_title: Publications

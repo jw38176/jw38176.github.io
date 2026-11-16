@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="row">
+    <div class="col-12 col-lg-10">
+        <article class="bg-white shadow-sm rounded-xl p-4 mt-4">
+            <p class="mb-3">
+                <a href="{{ '/publications/' | relative_url }}"><i class="fas fa-angle-double-left"></i> All publications</a>
+            </p>
+            <header class="mb-4">
+                {% include widgets/ae_badges.html badges=page.ae_badges %}
+                <h1 class="item-title mt-0 mb-2">{{ page.title }}</h1>
+                <p class="mt-0 mb-1 author-list">{% include widgets/author_list.html authors=page.authors %}</p>
+                <p class="mt-0 mb-1">{{ page.pub_pre }}<strong><i>{{ page.pub }}</i></strong>{{ page.pub_post }} {{
+                    page.pub_date }} {{ page.pub_last }} <span data-semantic-scholar-id="{{ page.semantic_scholar_id }}"></span></p>
+                {% include widgets/publication_links.html links=page.links %}
+            </header>
+
+            <h5>Abstract</h5>
+            {{ page.long_abstract | default: page.abstract | markdownify }}
+
+            {{ content }}
+        </article>
+    </div>
+</div>

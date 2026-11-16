@@ -101,6 +101,11 @@ h1, h2, h3, h4, h5, h6,
     color: var(--title-color);
 }
 
+.item-title a,
+.item-title a:hover {
+    color: var(--title-color);
+}
+
 .author-list {
     font-size: 0.95rem;
 }
@@ -190,6 +195,31 @@ div.lazy {
 
 .badge-publication {
     font-size: 100%;
+}
+
+.ae-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.ae-badge {
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 0.35em 0.65em;
+}
+
+.ae-badge-img {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+}
+
+.ae-badge-default {
+    background-color: #6c757d;
 }
 
 .badge-distinguished {

@@ -25,4 +25,13 @@ sitemap: false
   </url>
 {%- endunless -%}
 {%- endfor -%}
+{%- for pub in site.publications -%}
+{%- unless pub.sitemap == false -%}
+{%- assign loc = pub.url | replace: "/index.html", "/" | replace: ".html", "" -%}
+  <url>
+    <loc>{{ site_root }}{{ loc }}</loc>
+    <lastmod>{{ pub.date | date: "%Y-%m-%d" }}</lastmod>
+  </url>
+{%- endunless -%}
+{%- endfor -%}
 </urlset>

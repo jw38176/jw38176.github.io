@@ -1,0 +1,33 @@
+# ACM-style artifact evaluation badges.
+# Usage in a publication's front matter:
+#   ae_badges:
+#     - available
+#     - evaluated
+#     - reproduced
+# img: baked circle+icon SVG used for the round (icons_only) rendering.
+# color/icon: background color and Font Awesome icon for the pill rendering.
+available:
+  label: "Artifacts Available"
+  color: "#1e8449"
+  icon: "fa-box-open"
+  img: "assets/images/badges/ae/available.svg"
+evaluated:
+  label: "Artifacts Evaluated"
+  color: "#c0392b"
+  icon: "fa-check-circle"
+  img: "assets/images/badges/ae/evaluated.svg"
+reusable:
+  label: "Artifacts Evaluated – Reusable"
+  color: "#1e8449"
+  icon: "fa-recycle"
+  img: "assets/images/badges/ae/reusable.svg"
+reproduced:
+  label: "Results Reproduced"
+  color: "#2471a3"
+  icon: "fa-flask"
+  img: "assets/images/badges/ae/reproduced.svg"
+replicated:
+  label: "Results Replicated"
+  color: "#2471a3"
+  icon: "fa-copy"
+  img: "assets/images/badges/ae/replicated.svg"
